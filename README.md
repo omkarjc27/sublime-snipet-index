@@ -17,8 +17,3 @@ Browse through a huge database of Code Functions/Classes/Snippets
 	1. Select text to search.
 	2. `RightClick` on the screen.
 	3. Select `Snippet Index`.
-
-- HotKeys
-	1. Select text to search.
-	2. Press `Ctrl+Shift+E`.
-
