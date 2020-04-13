@@ -1,4 +1,7 @@
 # Snippet Index
+
+**Current version supports Python only**
+
 ![Demo for Package](demo.gif)
 
 Sublime Text 3 package for [Snippet Index](https://github.com/omkarjc27/Snippet-Index)
