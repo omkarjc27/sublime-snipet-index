@@ -11,7 +11,7 @@ class SnippetindexCommand(sublime_plugin.TextCommand):
 		if index == -1:
 			return
 
-		hsh = self.search_result[int(index)][1]
+		hsh = self.search_result[int(index)][2]
 		
 		response = urllib.request.urlopen('https://snip-index.herokuapp.com/fetch/{}/{}'.format('py',hsh))
 		html = response.read()
@@ -44,8 +44,10 @@ class SnippetindexCommand(sublime_plugin.TextCommand):
 
 			self.list = []
 			for i in range(len(self.search_result)):
-				self.list.append(str(self.search_result[i][2])+"|"+str(self.search_result[i][3]))
-			
+				if self.search_result[i][3] != None:
+					self.list.append(str(self.search_result[i][3])+"|"+str(self.search_result[i][3]))
+				else:
+					self.list.append(str(self.search_result[i][3]))
 
 			self.view.window().show_quick_panel(self.list, self.on_done,1, 0)
 
