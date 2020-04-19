@@ -45,7 +45,7 @@ class SnippetindexCommand(sublime_plugin.TextCommand):
 			self.list = []
 			for i in range(len(self.search_result)):
 				if self.search_result[i][3] != None:
-					self.list.append(str(self.search_result[i][3])+"|"+str(self.search_result[i][3]))
+					self.list.append(str(self.search_result[i][3])+"|"+str(self.search_result[i][4]))
 				else:
 					self.list.append(str(self.search_result[i][3]))
 
